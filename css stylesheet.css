@@ -1,0 +1,162 @@
+  .innpakning {
+    display: flex; /*forteller at vi ønsker å bruke flexbox*/
+    min-height: 100vh; /*angir minimum høyde*/
+    flex-direction: row; /*plasserer innholdet i en rad*/
+    flex-wrap: wrap; /*lar oss bryte rader*/
+    width: auto; /*bredden justeres automatisk*/
+    margin: 0; /*ingen marglengde*/
+    font-family: 'Cardo', serif; /*angir fonttype*/
+    background-color: #cce9ef;/*angir bakgrunnsfarge*/
+  }
+ * {
+    box-sizing:  border-box; /*Bredde og høydeegenskapene skal inkludere innhold, padding og       border*/ }
+  .meny {
+    background: #99D3DF; /*angir bakgrunnsfarge*/
+    flex: 1; /*angir at boksen skal fylle ut området*/
+    border-radius: 10px; /*avrunder kanter*/
+  }
+  .hovedkolonne {
+    display: flex; /*forteller av vi vil bruke flexbox*/
+    flex-direction: column; /*angir at vi plasserer boksene i en kolonne*/
+    flex: 5; /*angir størrelse på boks relativt til ledig plass*/
+  }
+  .innhold {
+    display: flex; /*forteller at vi vil bruke flexbox*/
+    flex-direction: row; /*plasserer boksene på en rad*/
+  }
+  .innhold .artikkel {
+    flex: 3; /*angir størrelse på boks*/
+    min-height: 60vh; /*angir minimum høyde i den relative enheten "vh"(1 vh = 1% av               nettleserens vindusstørrelse)*/
+    border-radius: 10px; /*avrunder kant*/
+    padding: 40px;
+  }
+  .innhold .sidebar1 {
+    background-image:url('https://raw.githubusercontent.com/BirkBoris/Vann-flexbox/gh-pages/bilder/voss-still-mineral-water-800ml-nrb-glass-bottle_temp_2.jpg');
+    background-size: 280px 614px; /*angir størrelse på bakgrunnsbilde*/
+    background-repeat: no-repeat; /*bildet i bakgrunnen gjentas ikke*/
+    flex: 1; /*fyller ut området i kolonnen med boksen*/
+    border-radius: 10px; /*avrunder kanter*/
+  }
+  .innhold .sidebar2 {
+    background-image:url('https://kolonial.no/media/uploads/public/0/107/6907-7f071-product_detail.jpg');
+    background-size: 235px 613px; /*angir størrelse på bakgrunnsbilde*/
+    background-repeat: no-repeat; /*bildet i bakgrunnen gjentas ikke*/
+    flex: 1; /*fyller ut området i kolonnen med boksen*/
+    border-radius: 10px; /*avrunder kanter*/
+  }
+.innhold .sidebar3 {
+    background-image:url('https://github.com/BirkBoris/Vann-flexbox/blob/gh-pages/bilder/fijivannn.png?raw=true');
+    background-size: 300px 730px; /*angir størrelse på bakgrunnsbilde*/
+    background-repeat: no-repeat; /*bildet i bakgrunnen gjentas ikke*/
+    flex: 1; /*fyller ut området i kolonnen med boksen*/
+    border-radius: 10px; /*avrunder kanter*/
+  }
+
+  .topptekst, .footer {
+    background: #88BBD6; /*angir bakgrunnsfarge*/
+    height: 20vh; /*angir høyde på boks i den relative størrelsen "vh" (1 vh = 1% av               nettleserens vindusstørrelse)*/
+    border-radius: 10px; /*avdrunder kantene*/
+  }
+  .topptekst {
+   background-image:url('https://www.nestle-waters.com/asset-library/PublishingImages/NewFolder/Visuels_contenu/Bubbles.jpg'); /*angir bakgrunnsbilde*/
+  }
+   .artikkel {
+     background:linear-gradient(-45deg, #edf4f8, #dae9f1); /*bakgrunnsfarge som sakte endrer        farge fra #CDCDCD til #fcfcfc */
+  }
+  .topptekst, .footer, .artikkel, .meny, .sidebar {
+    padding: 15px; /*mellomrom mellom bokskant og innhold*/
+  }
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif; /*angir font-type*/
+    text-transform: uppercase; /*overskrifter vil være store bokstaver*/
+    color: #FFFFFF; /*angir farge på overskrifter h1-h6*/
+  }
+  h3 {
+    font-size: 30px;
+    color: #4d4d4d
+  }
+  .hovedoverskrift {
+    color: #FFFFFF; /*angir farge på hovedoverskrift*/
+    font-weight: bold; /*angir utseende til fonten*/
+    font-size: 60px   /*angir størrelse på font*/
+  }
+  .underoverskrift{
+    color: #FFFFFF; /*angir farge på hovedoverskrift*/
+    font-weight: bold; /*angir utseende til fonten*/
+    font-size: 27px   /*angir størrelse på font*/
+  } 
+  ul {
+    list-style-type: none; /*fjerner kulepunkter*/
+    margin: 0; /*fjerner alle mellomrom*/
+    padding: 5px; /*fjerner alle mellomrom*/
+  }
+  ul a {
+    display: block; /*gjør om lenker til blokk*/
+    width: 170px; /*bredde på boksen*/
+    padding: 10px; /*avstand mellom bokskant og innhold*/
+    border-radius: 5px; /*avrunder kant*/
+    margin: 2px; /*avstand mellom bokser*/
+    color: white; /*angir farge (mørkegrå) på tekst*/
+    font-weight: bold; /*fet tekst*/
+    text-decoration: none; /*fjerner understrek*/
+    background-color: #88BBD6; /*angir bakgrunnsfarge*/
+    font-family: 'Oswald', sans-serif; /*angir font-type*/
+    font-size: 20px /*angir skriftstørrelse*/
+  }
+  ul a:hover {
+      background-color:#3b84ab; /*farge når vi holder musepeker over link*/
+  }
+  a {
+    text-decoration: none; /*fjerner understreker*/
+    display: inline-block; /*havner på en linje*/
+    padding: 8px 16px; /*avstand mellom bokskant og innhold*/
+  }
+
+    a:hover {
+    background-color: #3b84ab; /*angir bakgrunnsfarge*/
+    color: black; /*anfir farge på tekst*/
+  }
+
+  .tilbake {
+    background-color: #99D3DF; /*farge på bakgrunn*/
+    color: white; /*farge på tekst*/
+    border-radius: 5px; /*runder av kantene*/
+    font-family: 'Oswald', sans-serif; /*angir font-type*/
+    font-size: 18px /*angir skriftstørrelse*/
+  }
+  .vanliglink {
+    padding: 0; /*angir avstand mellom bokskant og innhold*/
+  }
+  .vanliglink:hover {
+    background: transparent; /*ingen ekstra farge når musepeker føres over*/
+    color: white; /*hvit farge på tekst når musepeker føres over*/
+  }
+  #Selskap {
+    border-collapse: collapse;/*angir én border rundt tabell*/
+    width: 100%; /*angir bredde på tabell*/
+  }
+  
+  #Selskap td, #Selskap th {
+    border: 1px solid #ddd; /*solid farge på border*/
+    padding: 8px; /*avstand mellom bokskant og innhold*/
+  }
+  
+  #Selskap tr:nth-child(even){background-color: #f2f2f2;} /*gir farge til annenhver rad*/
+  
+  #Selskap tr:hover {background-color: #ddd;} /*farge når man holder musepeker over*/
+  
+  #Selskap th {
+    padding-top: 12px; /*avstand mellom tekst of bokskant øverst*/
+    padding-bottom: 12px; /*avstand mellom tekst of bokskant nederst*/
+    text-align: left;/*teksten begynner fra venstre*/
+    background-color: #88BBD6;/*angir bakgrunnsfarge*/
+    color: white;
+  }
+  .vanligliste li::before  {
+    content: "•"; color: #88BBD6;
+
+  }
+  .vanligliste {
+	  text-align:center;
+  }
+	  
